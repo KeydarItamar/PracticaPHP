@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<!--Trabajo de Itamar Keydar DAW2-->
+
 <body>
     <?php
-    //variables de los datos de la persona: 
-    //$fecha = date_create();
-    //date_date_set($fecha, 2001, 2, 3);
-    //echo date_format($fecha, 'Y-m-d');
-
     $nom = "Kurt";
     $cognom= "Cagle";
     $edat= 40;
@@ -34,32 +31,26 @@
         echo "Les dades de " . $nom . " " . "son:"; 
         ?>
     </h2>
+    <!--Datos de la persona !-->
     <ul>
         <li>
-            <?php echo "Es diu " . $nom;
-            ?>
+            <?php echo "Es diu. " . $nom;?>
         </li>
-        
         <li>
-            <?php echo "Te ". $edat . " anys" ;
-            ?>
+            <?php echo "Te: ". $edat . " anys" ;?>
         </li>
-
         <li>
             <?php echo "Va neixer l'any: "?>
             <b><?php echo date_format($dataNaix, 'Y-m-n');?></b>
         </li>
         <li>
-            <?php echo "Els seus telefons son:". $telf[0] . " - " . $telf[1] ;
-            ?>
+            <?php echo "Els seus telefons son:". $telf[0] . " - " . $telf[1] ;?>
         </li>
         <li>
-            <?php echo "Viu a: ". $adre ;
-            ?>
+            <?php echo "Viu a: ". $adre ;?>
         </li>
         <li>
-            <?php echo "El seu email és: " . $mail ;
-            ?>
+            <?php echo "El seu email és: " . $mail ;?>
         </li>
         <li>
             <?php
@@ -68,8 +59,7 @@
             ?>
         </li>
         <li>
-            <?php echo "I medeix: " . $altura ;
-            ?>
+            <?php echo "I medeix: " . $altura ;?>
         </li>
 
     </ul>
