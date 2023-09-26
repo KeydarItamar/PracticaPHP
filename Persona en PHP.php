@@ -63,5 +63,27 @@
         </li>
 
     </ul>
+<?php
+define("IVA", 0.21);
+$cursos = array(
+    "id" => array(1, 2, 3),
+    "nom" => array("PHP", "Laravel", "Django"),
+    "Desc" => array("Introduccio a PHP", "Laravel per experts", "Dominant django"),
+    "Preu" => array(15.5, 30, 10)
+);
+echo '<h1>Llista de cursos</h1>';
+echo '<h2>Numero de cursos apuntados: 3</h2>';
+for ($i = 0; $i < 3; $i++) {
+
+    echo '<div style="border:1px solid black">';
+    echo '<h2>' . $cursos["nom"][$i] . '</h2>';
+    echo '<p>' . $cursos["Desc"][$i]. '<p>';
+    $calcuIva = $cursos["Preu"][$i] * 0.21; 
+   // echo '<p>El preu del llibre amb Iva: '. ($cursos["Preu"][$i]) + $calcuIva . '<p>';
+    echo '<p>El preu del llibre amb Iva: ' . ($cursos["Preu"][$i] + $calcuIva) . '</p>';
+
+    echo '</div>';
+}
+?>
 </body>
 </html>
