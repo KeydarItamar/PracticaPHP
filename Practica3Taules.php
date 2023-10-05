@@ -14,11 +14,15 @@
     <h1>Practica 3</h1>
     <h2>Primera parte: Mesas y comensales </h2>
 
+     <?php define('MAX_COMENSALES', $_POST["maxComens"]);
+           define("MESAS", $_POST["mesas"]);
+           define('MIN_COMENSALES', 0);
+    ?>
     <?php
     // creacion del array con el numero aleatorio de comensales.
     $taules = array("");
-    for ($x = 0; $x <= 9; $x++) {
-        $numeroRandom = random_int(0, 5);
+    for ($x = 0; $x <= MESAS; $x++) {
+        $numeroRandom = random_int(MIN_COMENSALES, MAX_COMENSALES);
         array_push($taules, $numeroRandom);
     }
     ?>
@@ -26,10 +30,10 @@
         <?php
         // Iteracion de mesas con comensales.
 
-        for ($i = 0; $i <= 9; $i++) {
-            if ($taules[$i] == 5) {
+        for ($i = 0; $i <= MESAS; $i++) {
+            if ($taules[$i] == MAX_COMENSALES) {
                 ?> <li><?php   echo "la taula $i te está plena"; ?></li>
-             <?php } elseif ($taules[$i] == 0) {
+             <?php } elseif ($taules[$i] == MIN_COMENSALES) {
              ?> <li> <?php  echo "la taula $i esta buida";?> </li>
                 <?php  } else {
                     ?> <li>  <?php  echo " la taula $i te $taules[$i] comensals </li>";

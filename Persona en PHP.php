@@ -72,7 +72,7 @@ $cursos = array(
     "Preu" => array(15.5, 30, 10)
 );
 echo '<h1>Llista de cursos</h1>';
-echo '<h2>Numero de cursos apuntados: 3</h2>';
+echo '<h2>Numero de cursos apuntados: 3 </h2>';
 for ($i = 0; $i < 3; $i++) {
 
     echo '<div style="border:1px solid black">';
